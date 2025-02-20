@@ -1,0 +1,15 @@
+[
+    {
+        "arrival_time": "2025-02-24T19:12:00+03:00",
+        "arrival_transfer_time": "2025-02-21T14:05:00+03:00",
+        "departure_time": "2025-02-20T20:05:00-05:00",
+        "departure_transfer_time": "2025-02-22T12:00:00+03:00",
+        "from": "Нью-Йорк",
+        "from_transfer": "Стамбул",
+        "has_transfer": true,
+        "to": "Ростов-на-Дону",
+        "to_transfer": "Стамбул",
+        "transport_type_after_trans": "bus",
+        "transport_type_before_trans": "plane"
+    }
+]
