@@ -1,7 +1,4 @@
 #include "workAPI.h"
-#include "nlohmann/detail/exceptions.hpp"
-#include <cpr/parameters.h>
-#include <exception>
 
 
 std::string WorkWithAPI::TransportTypeTranslation(const std::string& type) {

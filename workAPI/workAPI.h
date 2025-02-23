@@ -6,6 +6,9 @@
 #include "nlohmann/json_fwd.hpp"
 #include "user/User.h"
 #include <nlohmann/json.hpp>
+#include "nlohmann/detail/exceptions.hpp"
+#include <cpr/parameters.h>
+#include <exception>
 
 
 class WorkWithAPI {
