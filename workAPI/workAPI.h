@@ -9,6 +9,7 @@
 #include "nlohmann/detail/exceptions.hpp"
 #include <cpr/parameters.h>
 #include <exception>
+#include <cctype>
 
 
 class WorkWithAPI {
@@ -32,6 +33,7 @@ class WorkWithAPI {
         void DeleteOldFiles();
         void PrintJsonElem(const nlohmann::basic_json<>& elem);
 
+        bool IsDigit(std::string& line);
     private:
         struct Parametrs {
             const std::string kFormat = "json";

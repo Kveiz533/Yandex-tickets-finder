@@ -55,11 +55,28 @@ bool WorkWithAPI::SetKey(User& user, const std::string& key) {
 
 }
 
+bool WorkWithAPI::IsDigit(std::string& line) {
+    for (auto elem: line) {
+        if (!std::isdigit(elem)) {
+            return false;
+        }
+    }
+    return true;
+ }
+
 bool WorkWithAPI::SetDate(User& user, const std::string& date) {
     if (date.length() == 10) {
-        if (date[4] == '-' && date[7] == '-') {
-            user.SetDate(date);
-            return true;
+        std::string year = date.substr(0, 4);
+        std::string month = date.substr(5, 2);
+        std::string day = date.substr(8, 2);
+
+        if (date[4] == '-' && date[7] == '-' && IsDigit(year) && IsDigit(month) && IsDigit(day)) {
+            int m = std::stoi(month);
+            int d = std::stoi(day);
+            if (m < 13 && d < 32) {
+                user.SetDate(date);
+                return true;
+            }
         }
     }
     return false;

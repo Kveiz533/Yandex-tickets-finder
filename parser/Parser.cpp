@@ -84,7 +84,7 @@ void Parse() {
                 } else {
                     std::cout << "Сначала установите ключ" << std::endl;
                 }
-            } else if (key_recieved && line[0] == "update" && line[1] == "result") {
+            } else if (line[0] == "update" && line[1] == "result") {
                 if (key_recieved) {
                     work_with_api.UpdateRoutesCache(user);
                 } else {
